@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=WbNNESIxJnY
+
+#activate virtual environment
+
+.\venv\Scripts\activate
+
