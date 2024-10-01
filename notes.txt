@@ -4,3 +4,12 @@ https://www.youtube.com/watch?v=WbNNESIxJnY
 
 .\venv\Scripts\activate
 
+#db changes
+
+python manage.py migrate
+
+#git
+
+git add --all
+git commit -m "init"
+git push origin main
