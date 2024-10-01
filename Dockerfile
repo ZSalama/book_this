@@ -46,7 +46,7 @@ RUN pip install -r /tmp/requirements.txt
 ARG PROJ_NAME="django_backend"
 
 #create bash script to run django project
-RUN prinf "#!/bin/bash\n" > ./paracord_runner.sh && \
+RUN printf "#!/bin/bash\n" > ./paracord_runner.sh && \
     printf "RUN_PORT=\"\${PORT:-8000}\"\n\n" >> ./paracord_runner.sh && \
     printf "python manage.py migrate --noinput\n" >> ./paracord_runner.sh && \
     printf "gunicorn ${PROJ_NAME}.wsgi:application --bind \"0.0.0.0:\$RUN_PORT\"\n" >> ./paracord_runner.sh 
