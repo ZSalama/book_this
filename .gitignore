@@ -1,7 +1,5 @@
 venv/
 book_this.pem
-book_this.code-workspace
-src/visits/migrations/
 
 #python.gitignore
 # Byte-compiled / optimized / DLL files
