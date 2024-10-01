@@ -42,6 +42,15 @@ RUN pip install -r /tmp/requirements.txt
 
 #run any other commands that do not need the database here
 
+ENV DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+#custom py function to download styling
+RUN python manage.py vendor_pull
+
+RUN python manage.py collectstatic --noinput
+
+# whitenoise
+
 #set Django default project name
 ARG PROJ_NAME="django_backend"
 

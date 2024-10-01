@@ -1,6 +1,9 @@
 venv/
 book_this.pem
 
+src/staticfiles/vendors
+local-cdn/
+
 #python.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
