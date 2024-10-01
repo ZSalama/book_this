@@ -42,7 +42,11 @@ RUN pip install -r /tmp/requirements.txt
 
 #run any other commands that do not need the database here
 
+ARG DJANGO_SECRET_KEY
 ENV DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+ARG DJANGO_DEBUG=0
+ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 
 #custom py function to download styling
 RUN python manage.py vendor_pull
