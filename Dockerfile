@@ -32,7 +32,7 @@ RUN mkdir -p /code
 WORKDIR /code
 
 #copy requirements
-COPY requirements/txt /tmp/requirements.txt
+COPY requirements.txt /tmp/requirements.txt
 
 #copy project code to containers working directory
 COPY ./src /code
