@@ -13,3 +13,8 @@ python manage.py migrate
 git add --all
 git commit -m "init"
 git push origin main
+
+
+#use django-storages or s3 if attempting to upload files
+
+FishManTa@os5
