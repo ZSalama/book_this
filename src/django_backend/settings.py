@@ -171,6 +171,8 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://bookmethisasap.com']
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
