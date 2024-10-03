@@ -24,3 +24,7 @@ def register_view(request):
         password = request.POST.get("password") or None
         User.objects.create_user(username, email, password)
     return render(request, "auth/register.html", {})
+
+def pw_protected_view(request, *args, **kwargs):
+
+    return render(request, "protected/entry.html", {})
