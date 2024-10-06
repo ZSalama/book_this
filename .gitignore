@@ -4,6 +4,8 @@ notes_ignored.txt
 
 src/staticfiles/vendors
 local-cdn/
+src/subscriptions/migrations
+src/customers/migrations
 
 #python.gitignore
 # Byte-compiled / optimized / DLL files

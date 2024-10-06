@@ -31,6 +31,7 @@ ADMIN_USER_NAME=config("ADMIN_USER_NAME", default="Admin user")
 ADMIN_USER_EMAIL=config("ADMIN_USER_EMAIL", default=None)
 
 
+
 MANAGERS=[]
 ADMINS=[]
 if all([ADMIN_USER_NAME, ADMIN_USER_EMAIL]):
@@ -47,7 +48,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY")
 DEBUG = config("DJANGO_DEBUG", cast=bool)
 
 #print("DEBUG", DEBUG, type(DEBUG))
-
+BASE_URL = config("BASE_URL", default=None)
 ALLOWED_HOSTS = [
     ".railway.app",
     ".bookmethisasap.com" #https://saas.prod.railway.app
@@ -70,6 +71,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'visits',
     'commando',
+    'profiles',
+    'subscriptions',
+    'customers',
     # 3rd party
     'allauth_ui',
     'allauth',
