@@ -1,6 +1,7 @@
 venv/
 book_this.pem
 notes_ignored.txt
+.env
 
 src/staticfiles/vendors
 local-cdn/

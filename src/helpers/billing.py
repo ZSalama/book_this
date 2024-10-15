@@ -18,7 +18,7 @@ def create_customer(
     response = stripe.Customer.create(
         name=name,
         email=email,
-        invoice_settings={"default_payment_method": "pm_card_visa"},
+        invoice_settings={"default_payment_method": None},
         metadata=metadata
     )
     if raw:
