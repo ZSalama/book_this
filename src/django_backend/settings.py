@@ -175,7 +175,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://bookmethisasap.com']
+CSRF_TRUSTED_ORIGINS = ['https://bookmethisasap.com', 'https://www.bookmethisasap.com']
 
 
 # Internationalization
