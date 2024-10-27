@@ -22,13 +22,10 @@
                 <th scope="col" class="px-6 py-3">
                     Time
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Action
-                </th>
             </tr>
         </thead>
         {% for appointments in appointments_list %}
-            {% include 'dashboard/snippets/table_items.html' with object=appointments %}
+            {% include 'appointments/snippets/table_items.html' with object=appointments %}
         {% endfor %}
     </table>
 </div>

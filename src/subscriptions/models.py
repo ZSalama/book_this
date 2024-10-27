@@ -281,7 +281,7 @@ def user_sub_post_save(sender, instance, *args, **kwargs):
     subscription_obj = user_sub_instance.subscription
     groups_ids = []
     if subscription_obj is not None:
-        groups = subscription_obj.group.all()
+        groups = subscription_obj.groups.all()
         groups_ids = groups.values_list('id', flat=True)
     if not ALLOW_CUSTOM_GROUPS:
         user.groups.set(groups)

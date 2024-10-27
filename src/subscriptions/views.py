@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def user_subscription_view(request,):
     user_sub_obj, created = UserSubscription.objects.get_or_create(user=request.user)
+    print(user_sub_obj.stripe_id)
     if request.method == "POST":
         print("refresh sub")
         finished = subs_utils.refresh_active_users_subscriptions(user_ids=[request.user.id], active_only=False)
