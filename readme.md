@@ -6,8 +6,7 @@ Book This is a web application designed to practice and showcase my software dev
 ## Features
 - User registration and authentication
 - Appointment booking and management
-- Calendar integration
-- Notifications and reminders
+- payment based subscrpitions with different tiers
 - Admin dashboard for service providers
 
 ## Active URL
