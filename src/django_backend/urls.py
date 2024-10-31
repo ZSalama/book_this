@@ -49,5 +49,5 @@ urlpatterns = [
     path('checkout/start/', checkout_views.checkout_redirect_view, name='stripe-checkout-start'),
     path('checkout/success/', checkout_views.checkout_finalize_view, name='stripe-checkout-end'),
     path('my_appointments/', appointments_views.my_appointments_view, name='my_appointments'),
-
+    path('dashboard/active_sub_required/', appointments_views.active_sub_required, name='active-sub-required'),
 ]

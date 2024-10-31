@@ -1,0 +1,31 @@
+name: maintain appointments
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  populate-appointments:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python
+        with:
+          python-version: '3.12.6'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Populate appointments
+        working-directory: ./src
+        run: |
+          python maintain_appointments.py
