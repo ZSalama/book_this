@@ -9,6 +9,8 @@ src/staticfiles/vendors
 local-cdn/
 src/subscriptions/migrations
 src/customers/migrations
+src/maintain_appointments_local.py
+src/populate_appointments_local.py
 
 #python.gitignore
 # Byte-compiled / optimized / DLL files
