@@ -1,10 +1,9 @@
 import os
 import django
 from django.utils import timezone
-from datetime import timedelta
-from appointments.models import Appointment
+from datetime import timedelta, time
+
 from pytz import timezone as pytz_timezone
-from datetime import time
 
 # Define the Eastern Time Zone
 eastern_tz = pytz_timezone('America/New_York')
@@ -12,6 +11,8 @@ eastern_tz = pytz_timezone('America/New_York')
 def populate_appointments():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_backend.settings')
     django.setup()
+
+    from appointments.models import Appointment
 
     # Get the current date in the Eastern time zone
     current_date = timezone.now().astimezone(eastern_tz).date()
