@@ -16,6 +16,7 @@ jobs:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       DJANGO_DUBUG: 'False'
+      DJANGO_SETTINGS_MODULE: 'django_backend.settings'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
