@@ -52,3 +52,6 @@ def user_only_view(request, *args, **kwargs):
 def staff_only_view(request, *args, **kwargs):
 
     return render(request, 'protected/staff-only.html', {})
+
+def active_subscription_required(request, *args, **kwargs):
+    return render(request, 'dashboard/active_sub_required.html', {})

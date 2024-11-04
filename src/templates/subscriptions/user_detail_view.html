@@ -20,5 +20,12 @@
 <p>Start: {{ subscription.current_period_start }}</p>
 
 <p>End: {{ subscription.current_period_end|timeuntil }} ({{ subscription.current_period_end }})</p>
+<br>
+<p>Example testing billing information</p>
+
+{% load static %}
+<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+    <img src="{% static 'images/sample_card.png' %}" alt="Picture">
+</div>
 
 {% endblock content %}

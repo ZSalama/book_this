@@ -21,12 +21,14 @@ from checkouts import views as checkout_views
 from landing import views as landing_views
 from subscriptions import views as subscription_views
 from appointments import views as appointments_views
+from dashboard import views as dashboard_views
 from .views import (
     home_view, 
     about_view, 
     pw_protected_view,
     user_only_view,
-    staff_only_view
+    staff_only_view,
+    active_subscription_required
 )
 urlpatterns = [
     path("", landing_views.landing_dashboard_page_view, name='home'),
@@ -49,5 +51,5 @@ urlpatterns = [
     path('checkout/start/', checkout_views.checkout_redirect_view, name='stripe-checkout-start'),
     path('checkout/success/', checkout_views.checkout_finalize_view, name='stripe-checkout-end'),
     path('my_appointments/', appointments_views.my_appointments_view, name='my_appointments'),
-    path('dashboard/active_sub_required/', appointments_views.active_sub_required, name='active-sub-required'),
+    path('dashboard/active_sub_required/', active_subscription_required, name='active-sub-required'),
 ]

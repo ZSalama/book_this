@@ -1,6 +1,9 @@
 name: maintain appointments
 
 on:
+  workflow_dispatch:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *' # Run at midnight every day
       branches: 

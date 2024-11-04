@@ -13,6 +13,3 @@ def my_appointments_view(request):
     #appointments = Appointment.objects.filter(user_id=request.user)
     appointments = Appointment.objects.filter(user_id=request.user, date__gt=timezone.now()).order_by('date', 'court')
     return render(request, 'appointments/my_appointments.html', {'appointments_list': appointments})
-
-def active_sub_required(request):
-    return render(request, 'dashboard/active_sub_required.html', {})

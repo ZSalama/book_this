@@ -11,9 +11,10 @@ def active_subscription_required(view_func):
             if user_subscription.status == 'active':
                 return view_func(request, *args, **kwargs)
             else:
-                #return HttpResponseForbidden("You need an active subscription to access this page.")
-                render(request, 'dashboard/active_sub_required.html', {})
+                # Return the rendered template for inactive subscription
+                return render(request, 'dashboard/active_sub_required.html', {})
         except UserSubscription.DoesNotExist:
-            #return HttpResponseForbidden("You need an active subscription to access this page.")
-            render(request, 'dashboard/active_sub_required.html', {})
-    return _wrapped_view
+            # Return the rendered template for no subscription
+            return render(request, 'dashboard/active_sub_required.html', {})
+    
+    return _wrapped_view  # Return the wrapped view function
