@@ -7,8 +7,8 @@ from appointments.models import Appointment
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_backend.settings')
-    django.setup()
+    #os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_backend.settings')
+    #django.setup()
     # Get the current date and time, and calculate one week into the future
     future_date = timezone.now().date() + timedelta(days=7)
 
